@@ -28,26 +28,26 @@ export default function Intro() {
         </IntroBoxTitle>
         <IntroBoxItem>
           <IntroItem>
-            <IntroItemIcon>
-              <ShoppingCart size={24} />
+            <IntroItemIcon variant="brand-yellow-dark">
+              <ShoppingCart size={20} color="white" />
             </IntroItemIcon>
             <IntroItemSpan>Compra simples e segura</IntroItemSpan>
           </IntroItem>
           <IntroItem>
-            <IntroItemIcon>
-              <Package size={24} />
+            <IntroItemIcon variant="base-text">
+              <Package size={20} color="white" />
             </IntroItemIcon>
             <IntroItemSpan>Embalagem mantém o café intacto</IntroItemSpan>
           </IntroItem>
           <IntroItem>
-            <IntroItemIcon>
-              <Timer size={24} />
+            <IntroItemIcon variant="brand-yellow">
+              <Timer size={20} color="white" />
             </IntroItemIcon>
             <IntroItemSpan>Entrega rápida e rastreada</IntroItemSpan>
           </IntroItem>
           <IntroItem>
-            <IntroItemIcon>
-              <Coffee size={24} />
+            <IntroItemIcon variant="brand-purple">
+              <Coffee size={20} color="white" />
             </IntroItemIcon>
             <IntroItemSpan>O café chega fresquinho até você</IntroItemSpan>
           </IntroItem>

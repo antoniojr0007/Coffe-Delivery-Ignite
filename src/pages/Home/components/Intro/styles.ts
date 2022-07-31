@@ -1,16 +1,17 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+
+interface ItemProps {
+  variant: 'brand-purple' | 'base-text' | 'brand-yellow' | 'brand-yellow-dark'
+}
 
 export const IntroContainer = styled.div`
   display: flex;
   width: 90rem;
   height: 34rem;
-  margin: 5rem auto;
-  //align-items: center;
-  //justify-content: space-around;
+  margin: 3rem auto;
 `
 
 export const IntroContent = styled.div`
-  //justify-content: space-around;
   margin: 0 5rem 0 5rem;
 `
 export const IntroImg = styled.div`
@@ -47,14 +48,17 @@ export const IntroBoxItem = styled.div`
   gap: 0.5rem;
 `
 
-export const IntroItemIcon = styled.div`
+export const IntroItemIcon = styled.div<ItemProps>`
   width: 2rem;
   height: 2rem;
   border-radius: 100%;
-  background: ${({ theme }) => theme.colors['brand-purple']};
   justify-content: center;
   align-items: center;
+  padding: 0.125rem;
   display: flex;
+  ${({ variant, theme }) => css`
+    background: ${theme.colors[`${variant}`]};
+  `}
 `
 export const IntroItem = styled.div`
   display: flex;
