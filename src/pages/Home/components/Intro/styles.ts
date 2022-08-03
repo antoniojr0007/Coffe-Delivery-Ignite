@@ -1,19 +1,35 @@
+import { rgba } from 'polished'
 import styled, { css } from 'styled-components'
+import BackgroundImg from '../../../../assets/Background.svg'
 
 interface ItemProps {
   variant: 'brand-purple' | 'base-text' | 'brand-yellow' | 'brand-yellow-dark'
 }
 
 export const IntroContainer = styled.div`
-  display: flex;
-  width: 90rem;
+  width: 100%;
   height: 34rem;
-  margin: 3rem auto;
+  background: ${({ theme }) => `url(${BackgroundImg}) no-repeat center,
+      linear-gradient(
+        0deg,
+        ${theme.colors['base-white']} 0%,
+        ${rgba(theme.colors['base-background'], 0.2)} 50%,
+        ${theme.colors['base-background']} 100%
+      )`};
+  background-size: cover;
+  //display: flex;
+  //margin: 3rem auto;
 `
 
 export const IntroContent = styled.div`
-  margin: 0 5rem 0 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3.5rem;
+  //margin: 0 5rem 0 5rem;
 `
+export const IntroBox = styled.div``
+
 export const IntroImg = styled.div`
   width: 29.75rem;
   height: 22.5rem;

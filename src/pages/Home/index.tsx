@@ -1,4 +1,5 @@
 import React from 'react'
+import CoffeeCard from '../../components/CoffeeCard'
 import Intro from './components/Intro'
 
 import { HomeCardsContainer, HomeCardsTitle, HomeContainer } from './styles'
@@ -6,10 +7,14 @@ import { HomeCardsContainer, HomeCardsTitle, HomeContainer } from './styles'
 const Home: React.FC = () => {
   return (
     <HomeContainer>
-      <Intro />
       <div className="container">
+        <Intro />
+        <HomeCardsTitle>Nossos cafés</HomeCardsTitle>
         <HomeCardsContainer>
-          <HomeCardsTitle>Nossos cafés</HomeCardsTitle>
+          <CoffeeCard />
+          <CoffeeCard />
+          <CoffeeCard />
+          <CoffeeCard />
         </HomeCardsContainer>
       </div>
     </HomeContainer>
