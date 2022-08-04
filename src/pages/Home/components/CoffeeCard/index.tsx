@@ -1,15 +1,14 @@
-import { Minus, Plus, ShoppingCart } from 'phosphor-react'
+import { ShoppingCart } from 'phosphor-react'
 import Latte from '../../../../assets/coffees/latte.svg'
-import Button from '../../../../components/Button'
+import { QuantityInput } from '../../../../components/QuantityInput'
 import { Text, TitleText } from '../../../../components/Typography'
 import {
+  CardAddButton,
   CardDescription,
   CardImage,
   CardShipping,
-  CardShippingCar,
   CardShippingPrice,
-  CardShippingQtda,
-  CardShippingQtdaSpan,
+  CardShippingQuantity,
   CardTags,
   CardTagSpan,
   CardTitle,
@@ -33,27 +32,19 @@ export default function CoffeeCard() {
       </CardDescription>
       <CardShipping>
         <CardShippingPrice>
-          <Text fs={12} lw="ss">
+          <Text fs={12} lh="ss">
             R$
           </Text>
-          <TitleText fs={18} color="text" as="strong">
+          <TitleText fs={32} color="text" as="strong">
             9.99
           </TitleText>
         </CardShippingPrice>
-        <CardShippingQtda>
-          <Button>
-            <Minus size={20} />
-          </Button>
-          <CardShippingQtdaSpan>10</CardShippingQtdaSpan>
-          <Button>
-            <Plus size={20} />
-          </Button>
-          <CardShippingCar>
-            <Button color="base-purple">
-              <ShoppingCart size={20} />
-            </Button>
-          </CardShippingCar>
-        </CardShippingQtda>
+        <CardShippingQuantity>
+          <QuantityInput />
+          <CardAddButton>
+            <ShoppingCart size={22} />
+          </CardAddButton>
+        </CardShippingQuantity>
       </CardShipping>
     </CoffeeCardContainer>
   )

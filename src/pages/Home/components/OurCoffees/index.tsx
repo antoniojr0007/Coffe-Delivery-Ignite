@@ -2,7 +2,7 @@ import CoffeeCard from '../CoffeeCard'
 import {
   OurCoffeesCardsList,
   OurCoffeesContainer,
-  OurCoffeesTitle
+  OurCoffeesTitle,
 } from './styles'
 interface OurCoffeesProps {
   title: string

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Button from '../../../../components/Button'
 import { Text, TitleText } from '../../../../components/Typography'
 
 export const CoffeeCardContainer = styled.div`
@@ -67,29 +68,29 @@ export const CardShipping = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 `
 export const CardShippingPrice = styled.div`
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 0.1875rem;
 `
-export const CardShippingQtda = styled.div`
+export const CardShippingQuantity = styled.div`
+  width: 7.5rem;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0.5rem;
-  gap: 0.5rem;
-  background: ${(props) => props.theme.colors['base-button']};
-  width: 7rem;
-  height: 2rem;
-  margin-left: -2rem;
 `
-export const CardShippingQtdaSpan = styled.span`
-  font-size: ${(props) => props.theme.sizes[32]};
-  font-family: ${(props) => props.theme.fonts.regular};
-`
-export const CardShippingCar = styled.div`
-  width: 2rem;
-  height: 2rem;
+
+export const CardAddButton = styled(Button).attrs({
+  color: 'base-purple-dark',
+})`
+  width: 2.375rem;
+  height: 2.375rem;
+  border: none;
+  color: ${({ theme }) => theme.colors['base-card']};
+  margin-left: 0.3rem;
+  transition: 0.4s;
+
+  &:hover {
+    background: ${({ theme }) => theme.colors['base-purple']};
+  }
 `
