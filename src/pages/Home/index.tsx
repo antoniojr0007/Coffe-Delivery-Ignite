@@ -1,24 +1,17 @@
 import React from 'react'
-import CoffeeCard from '../../components/CoffeeCard'
-import Intro from './components/Intro'
+import { OurCoffees } from './components/OurCoffees'
 
-import { HomeCardsContainer, HomeCardsTitle, HomeContainer } from './styles'
+import { HomeContainer } from './styles'
 
 const Home: React.FC = () => {
   return (
     <HomeContainer>
       <div className="container">
-        <Intro />
-        <HomeCardsTitle>Nossos cafés</HomeCardsTitle>
-        <HomeCardsContainer>
-          <CoffeeCard />
-          <CoffeeCard />
-          <CoffeeCard />
-          <CoffeeCard />
-        </HomeCardsContainer>
+        <OurCoffees title="Nossos cafés" />
       </div>
     </HomeContainer>
   )
 }
 
+// <Intro />
 export default Home

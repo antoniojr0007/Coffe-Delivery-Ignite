@@ -12,12 +12,12 @@ const Header: React.FC = () => {
         <img src={Logo} alt="Logo Coffee Delivery" />
         <HeaderButtonContainer>
           <NavLink to={'/'}>
-            <Button color="brand-purple-light" title="São Paulo, SP">
+            <Button color="base-purple-light" title="São Paulo, SP">
               <MapPinLine size={24} />
             </Button>
           </NavLink>
           <NavLink to={'/confirmation'}>
-            <Button color="brand-yellow-light">
+            <Button color="base-yellow-light">
               <ShoppingCart size={24} />
             </Button>
           </NavLink>

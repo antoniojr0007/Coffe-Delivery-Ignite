@@ -116,3 +116,26 @@ export const coffees = [
     price: 9.9,
   },
 ]
+
+export const tags = [
+  {
+    id: 1,
+    name: 'tradicional',
+  },
+  {
+    id: 2,
+    name: 'gelado',
+  },
+  {
+    id: 3,
+    name: 'com leite',
+  },
+  {
+    id: 4,
+    name: 'especial',
+  },
+  {
+    id: 5,
+    name: 'alcoólico',
+  },
+]

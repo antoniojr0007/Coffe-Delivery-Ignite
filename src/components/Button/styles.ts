@@ -15,7 +15,7 @@ export const ButtonContainer = styled.button<ButtonProps>`
   border-radius: 6px;
   padding: 0 0.5rem;
   position: relative;
-  font-size: ${(props) => props.theme.textSizes['text-regular-m']};
+  font-size: ${(props) => props.theme.sizes[18]};
   ${({ variant, theme }) => css`
     background: ${theme.colors[`${variant}`]};
   `}

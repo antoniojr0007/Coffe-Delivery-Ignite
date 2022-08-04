@@ -10,8 +10,8 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
 export default function Button({ title, color, children, ...rest }: Props) {
   return (
     <ButtonContainer {...rest} variant={color}>
-      {title}
       {children}
+      {title}
     </ButtonContainer>
   )
 }

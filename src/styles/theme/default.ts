@@ -11,14 +11,14 @@ export const defaultTheme = {
     'base-subtitle': '#403937',
     'base-title': '#272221',
     'base-error': '#f84747',
-    'brand-purple-dark': '#4B2995',
-    'brand-purple': '#8047F8',
-    'brand-purple-light': '#EBE5F9',
-    'brand-yellow-dark': '#C47F17',
-    'brand-yellow': '#DBAC2C',
-    'brand-yellow-light': '#F1E9C9',
+    'base-purple-dark': '#4B2995',
+    'base-purple': '#8047F8',
+    'base-purple-light': '#EBE5F9',
+    'base-yellow-dark': '#C47F17',
+    'base-yellow': '#DBAC2C',
+    'base-yellow-light': '#F1E9C9',
   },
-  Sizes: {
+  sizes: {
     '48': '3rem', // 48px
     '32': '2rem', // 32px
     '24': '1.5rem', // 24px
@@ -35,11 +35,13 @@ export const defaultTheme = {
     title: "'Baloo 2'",
   },
   lineWeight: {
-    r: 'regular',
-    b: 'bold',
-    eb: 'extra-bold',
+    r: 400,
+    b: 600,
+    sb: 700,
+    eb: 800,
   },
   lineHeight: {
+    ss: '0.75rem',
     regular: '130%',
     Bold: '160%',
   },
