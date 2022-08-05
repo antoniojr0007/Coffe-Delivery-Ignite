@@ -15,7 +15,7 @@ export const GlobalStyle = createGlobalStyle`
   body, input, textarea, button {
     font-family: ${({ theme }) => theme.fonts.regular};
     font-weight: 400;
-    font-size: ${({ theme }) => theme.textSizes['text-regular-m']}
+    font-size: ${({ theme }) => theme.sizes[18]}
   }
   button {
     cursor: pointer;
@@ -39,6 +39,6 @@ export const GlobalStyle = createGlobalStyle`
   }
   ::-webkit-scrollbar-thumb {
     border-radius: 2rem;
-    background: ${({ theme }) => theme.colors['brand-purple']}
+    background: ${({ theme }) => theme.colors['base-purple']}
   }
 `

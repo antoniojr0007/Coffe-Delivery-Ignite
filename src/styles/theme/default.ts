@@ -11,31 +11,38 @@ export const defaultTheme = {
     'base-subtitle': '#403937',
     'base-title': '#272221',
     'base-error': '#f84747',
-    'brand-purple-dark': '#4B2995',
-    'brand-purple': '#8047F8',
-    'brand-purple-light': '#EBE5F9',
-    'brand-yellow-dark': '#C47F17',
-    'brand-yellow': '#DBAC2C',
-    'brand-yellow-light': '#F1E9C9',
+    'base-purple-dark': '#4B2995',
+    'base-purple': '#8047F8',
+    'base-purple-light': '#EBE5F9',
+    'base-yellow-dark': '#C47F17',
+    'base-yellow': '#DBAC2C',
+    'base-yellow-light': '#F1E9C9',
   },
-  textSizes: {
-    'title-title-xl': '3rem',
-    'title-title-l': '2rem',
-    'title-title-m': '1.5rem',
-    'title-title-s': '1.2rem',
-    'title-title-xs': '1.125rem',
-    'text-regular-l': '1.25rem',
-    'text-bold-l': '1.25rem',
-    'text-regular-m': '1rem',
-    'text-bold-m': '1rem',
-    'text-regular-s': '0.875rem',
-    'text-bold-s': '0.75rem',
-    'components-tag': '0.625rem',
-    'components-button-g': '0.875rem',
-    'components-button-s': '0.75rem',
+  sizes: {
+    '48': '3rem', // 48px
+    '32': '2rem', // 32px
+    '24': '1.5rem', // 24px
+    '20': '1.25rem', // 20px
+    '19': '1.2rem', // 19.2px
+    '18': '1.125rem', // 18px
+    '16': '1rem', // 16px
+    '14': '0.875rem', // 14px
+    '12': '0.75rem', // 12px
+    '10': '0.625rem', // 10px
   },
   fonts: {
     regular: "'Roboto'",
     title: "'Baloo 2'",
+  },
+  lineWeight: {
+    r: 400,
+    b: 600,
+    sb: 700,
+    eb: 800,
+  },
+  lineHeight: {
+    ss: '0.75rem',
+    regular: '130%',
+    Bold: '160%',
   },
 }
