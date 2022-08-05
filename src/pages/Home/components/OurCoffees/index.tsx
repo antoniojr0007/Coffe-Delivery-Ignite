@@ -1,3 +1,4 @@
+import { coffees } from '../../../../data/coffees'
 import CoffeeCard from '../CoffeeCard'
 import {
   OurCoffeesCardsList,
@@ -15,14 +16,17 @@ export function OurCoffees({ title }: OurCoffeesProps) {
         {title}
       </OurCoffeesTitle>
       <OurCoffeesCardsList>
-        <CoffeeCard />
-        <CoffeeCard />
-        <CoffeeCard />
-        <CoffeeCard />
-        <CoffeeCard />
-        <CoffeeCard />
-        <CoffeeCard />
-        <CoffeeCard />
+        {coffees.map((coffees) => {
+          return (
+            <CoffeeCard
+              key={coffees.id}
+              name={coffees.name}
+              photo={coffees.photo}
+              description={coffees.description}
+              price={coffees.price}
+            />
+          )
+        })}
       </OurCoffeesCardsList>
     </OurCoffeesContainer>
   )

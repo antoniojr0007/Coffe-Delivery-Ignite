@@ -1,7 +1,7 @@
 import { ShoppingCart } from 'phosphor-react'
-import Latte from '../../../../assets/coffees/latte.svg'
 import { QuantityInput } from '../../../../components/QuantityInput'
 import { Text, TitleText } from '../../../../components/Typography'
+import { formatMoney } from '../../../../Util/formatMoney'
 import {
   CardAddButton,
   CardDescription,
@@ -15,28 +15,40 @@ import {
   CoffeeCardContainer
 } from './styles'
 
-export default function CoffeeCard() {
+export interface Coffee {
+  id: number
+  tags: string[]
+  name: string
+  description: string
+  photo: string
+  price: number
+}
+
+interface CardCoffeeProps {
+  coffee: Coffee
+}
+
+export default function CoffeeCard({ coffee }: CardCoffeeProps) {
+  const formattedPrice = formatMoney(coffee.price)
   return (
     <CoffeeCardContainer>
       <CardImage>
-        <img src={Latte} alt="" />
+        <img src={`/coffees/${coffee.photo}.svg`} alt={coffee.description} />
       </CardImage>
       <CardTags>
-        <CardTagSpan>Tradicional</CardTagSpan>
-        <CardTagSpan>Especial</CardTagSpan>
-        <CardTagSpan>Especial</CardTagSpan>
+        {coffee.tags.map((tag) => {
+          return <CardTagSpan key={`${coffee.id}${tag}`}>{tag}</CardTagSpan>
+        })}
       </CardTags>
-      <CardTitle>Latte</CardTitle>
-      <CardDescription>
-        Uma dose de café expresso com o {'\n'} dobro de leite e espuma cremosa
-      </CardDescription>
+      <CardTitle fs={32}>{coffee.name}</CardTitle>
+      <CardDescription fs={12}>{coffee.description}</CardDescription>
       <CardShipping>
         <CardShippingPrice>
           <Text fs={12} lh="ss">
             R$
           </Text>
           <TitleText fs={32} color="text" as="strong">
-            9.99
+            {formattedPrice}
           </TitleText>
         </CardShippingPrice>
         <CardShippingQuantity>

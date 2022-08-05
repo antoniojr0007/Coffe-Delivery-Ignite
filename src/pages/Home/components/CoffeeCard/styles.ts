@@ -47,7 +47,6 @@ export const CardTagSpan = styled.span`
   font-weight: 700;
 `
 export const CardTitle = styled(TitleText).attrs({
-  size: '32',
   lh: 'regular',
   fw: 'sb',
   color: 'subtitle',
@@ -56,7 +55,6 @@ export const CardTitle = styled(TitleText).attrs({
   margin-bottom: 0.5rem;
 `
 export const CardDescription = styled(Text).attrs({
-  size: '12',
   lh: 'regular',
   fw: 'r',
   color: 'label',
