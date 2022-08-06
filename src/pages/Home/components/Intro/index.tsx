@@ -10,7 +10,7 @@ import {
   IntroContent,
   IntroImg,
   IntroSubTitle,
-  IntroTitle,
+  IntroTitle
 } from './styles'
 
 export default function Intro() {
