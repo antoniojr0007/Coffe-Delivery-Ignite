@@ -1,4 +1,4 @@
-export const defaultTheme = {
+const defaultTheme = {
   colors: {
     'base-white': '#FFFFFF',
     'base-background': '#FAFAFA',
@@ -46,3 +46,5 @@ export const defaultTheme = {
     Bold: '160%',
   },
 }
+
+export default defaultTheme
