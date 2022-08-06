@@ -3,7 +3,7 @@ import CoffeeCard from '../CoffeeCard'
 import {
   OurCoffeesCardsList,
   OurCoffeesContainer,
-  OurCoffeesTitle,
+  OurCoffeesTitle
 } from './styles'
 interface OurCoffeesProps {
   title: string
@@ -16,16 +16,8 @@ export function OurCoffees({ title }: OurCoffeesProps) {
         {title}
       </OurCoffeesTitle>
       <OurCoffeesCardsList>
-        {coffees.map((coffees) => {
-          return (
-            <CoffeeCard
-              key={coffees.id}
-              name={coffees.name}
-              photo={coffees.photo}
-              description={coffees.description}
-              price={coffees.price}
-            />
-          )
+        {coffees.map((coffee) => {
+          return <CoffeeCard key={coffee.id} coffee={coffee} />
         })}
       </OurCoffeesCardsList>
     </OurCoffeesContainer>

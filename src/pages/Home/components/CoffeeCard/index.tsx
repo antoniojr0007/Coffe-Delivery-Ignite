@@ -24,11 +24,11 @@ export interface Coffee {
   price: number
 }
 
-interface CardCoffeeProps {
+interface CoffeeProps {
   coffee: Coffee
 }
 
-export default function CoffeeCard({ coffee }: CardCoffeeProps) {
+export default function CoffeeCard({ coffee }: CoffeeProps) {
   const formattedPrice = formatMoney(coffee.price)
   return (
     <CoffeeCardContainer>
