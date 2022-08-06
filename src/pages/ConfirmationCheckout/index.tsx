@@ -1,3 +1,5 @@
+import { Container } from './styles'
+
 export default function ConfirmationCheckout() {
-  return <div>Confirmation Checkout</div>
+  return <Container>Confirmation Checkout</Container>
 }
