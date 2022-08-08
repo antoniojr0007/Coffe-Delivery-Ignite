@@ -12,7 +12,7 @@ export const ButtonContainer = styled.button<ButtonProps>`
   min-width: 2.3rem;
   height: 2.3rem;
   border: none;
-  border-radius: 6px;
+  border-radius: 0.375rem;
   padding: 0 0.5rem;
   position: relative;
   font-size: ${(props) => props.theme.sizes[18]};

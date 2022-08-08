@@ -9,14 +9,16 @@ const Header: React.FC = () => {
   return (
     <HeaderContainer>
       <div className="container">
-        <img src={Logo} alt="Logo Coffee Delivery" />
+        <NavLink to={'/'}>
+          <img src={Logo} alt="Logo Coffee Delivery" />
+        </NavLink>
         <HeaderButtonContainer>
           <NavLink to={'/'}>
             <Button color="base-purple-light" title="São Paulo, SP">
               <MapPinLine size={24} />
             </Button>
           </NavLink>
-          <NavLink to={'/confirmation'}>
+          <NavLink to={'/CompleteOrder'}>
             <Button color="base-yellow-light">
               <ShoppingCart size={24} />
             </Button>
