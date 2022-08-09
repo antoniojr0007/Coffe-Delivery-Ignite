@@ -11,17 +11,17 @@ import { AddressForm } from '../AddressForm'
 import { PaymentMethodInput } from '../PlaymentMethodInput'
 import { SectionTitle } from '../SectionTitle'
 import {
-  CompleteOrderFormContainer,
+  CheckoutOrderFormContainer,
   FormSectionContainer,
   FormSectionInput,
   FormSectionSelectPayment,
   PaymentMethodOptions,
 } from './styles'
 
-export function CompleteOrderForm() {
+export function CheckoutOrderForm() {
   const { colors } = useTheme()
   return (
-    <CompleteOrderFormContainer>
+    <CheckoutOrderFormContainer>
       <TitleText fs={18} color="subtitle">
         Complete seu pedido
       </TitleText>
@@ -58,6 +58,6 @@ export function CompleteOrderForm() {
           </PaymentMethodOptions>
         </FormSectionSelectPayment>
       </FormSectionContainer>
-    </CompleteOrderFormContainer>
+    </CheckoutOrderFormContainer>
   )
 }

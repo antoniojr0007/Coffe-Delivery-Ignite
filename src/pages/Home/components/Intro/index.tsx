@@ -1,16 +1,16 @@
 import { Coffee, Package, ShoppingCart, Timer } from 'phosphor-react'
 import { useTheme } from 'styled-components'
-import Banner from '../../../../assets/Banner.png'
+import Banner from '../../../../assets/Banner.svg'
 import { InfoWhithIcon } from '../../../../components/InfoWhithIcon'
 import {
-  IntroBox,
-  IntroBoxItem,
-  IntroBoxTitle,
-  IntroContainer,
-  IntroContent,
-  IntroImg,
-  IntroSubTitle,
-  IntroTitle,
+    IntroBox,
+    IntroBoxItem,
+    IntroBoxTitle,
+    IntroContainer,
+    IntroContent,
+    IntroImg,
+    IntroSubTitle,
+    IntroTitle
 } from './styles'
 
 export default function Intro() {

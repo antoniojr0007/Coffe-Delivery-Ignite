@@ -2,7 +2,7 @@ import { ButtonHTMLAttributes, ReactNode } from 'react'
 import { ButtonContainer } from './styles'
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
-  title?: string
+  title?: string | number
   color?: string
   children?: ReactNode
 }

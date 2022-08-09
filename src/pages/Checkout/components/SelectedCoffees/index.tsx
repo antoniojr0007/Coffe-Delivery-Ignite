@@ -15,7 +15,7 @@ export function SelectedCoffees() {
         <CoffeeCardSelected />
         <CoffeeCardSelected />
         <PaymentTotal />
-        <Button color="base-yellow">confirmar pedido</Button>
+        <Button color="base-yellow">Confirmar pedido</Button>
       </DetailContainer>
     </SelectedCoffeesContainer>
   )

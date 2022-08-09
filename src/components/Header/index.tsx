@@ -1,7 +1,7 @@
 import { MapPinLine, ShoppingCart } from 'phosphor-react'
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import Logo from '../../assets/Logo.png'
+import Logo from '../../assets/Logo.svg'
 import Button from '../Button'
 import { HeaderButtonContainer, HeaderContainer } from './styles'
 
@@ -18,7 +18,7 @@ const Header: React.FC = () => {
               <MapPinLine size={24} />
             </Button>
           </NavLink>
-          <NavLink to={'/CompleteOrder'}>
+          <NavLink to={'/Checkout'}>
             <Button color="base-yellow-light">
               <ShoppingCart size={24} />
             </Button>

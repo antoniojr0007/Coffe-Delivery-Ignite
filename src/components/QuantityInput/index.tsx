@@ -2,7 +2,7 @@ import { Minus, Plus } from 'phosphor-react'
 import {
   IconWrapper,
   QuantityInputContainer,
-  QuantityInputText
+  QuantityInputText,
 } from './styles'
 
 interface QuantityInputProps {

@@ -7,7 +7,7 @@ import {
   ButtonRemover,
   CoffeeCardContainer,
   CoffeeCardImage,
-  CoffeeCardInfo
+  CoffeeCardInfo,
 } from './styles'
 
 export function CoffeeCardSelected() {

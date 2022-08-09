@@ -12,7 +12,11 @@ export const DetailContainer = styled(SectionBaseStyle)`
   border-radius: 0.375rem 2.75rem;
   display: flex;
   flex-direction: column;
-  max-height: 36rem;
+
+  > button {
+    height: 3rem;
+    border-radius: 1rem;
+  }
 `
 export const DetailTotalContainer = styled(SectionBaseStyle)`
   display: flex;
