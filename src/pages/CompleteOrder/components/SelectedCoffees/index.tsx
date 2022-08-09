@@ -1,5 +1,7 @@
+import Button from '../../../../components/Button'
 import { TitleText } from '../../../../components/Typography'
-import { CoffeeCard } from '../CoffeeCard'
+import { CoffeeCardSelected } from '../CoffeeCardSelected'
+import { PaymentTotal } from '../PaymentTotal'
 import { DetailContainer, SelectedCoffeesContainer } from './styles'
 
 export function SelectedCoffees() {
@@ -9,7 +11,11 @@ export function SelectedCoffees() {
         Cafés selecionados
       </TitleText>
       <DetailContainer>
-        <CoffeeCard />
+        <CoffeeCardSelected />
+        <CoffeeCardSelected />
+        <CoffeeCardSelected />
+        <PaymentTotal />
+        <Button color="base-yellow">confirmar pedido</Button>
       </DetailContainer>
     </SelectedCoffeesContainer>
   )

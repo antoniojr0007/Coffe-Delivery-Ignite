@@ -12,7 +12,7 @@ import {
   CardTags,
   CardTagSpan,
   CardTitle,
-  CoffeeCardContainer,
+  CoffeeCardContainer
 } from './styles'
 
 export interface Coffee {
@@ -52,7 +52,7 @@ export default function CoffeeCard({ coffee }: CoffeeProps) {
           </TitleText>
         </CardShippingPrice>
         <CardShippingQuantity>
-          <QuantityInput />
+          <QuantityInput size="medium" />
           <CardAddButton>
             <ShoppingCart size={22} />
           </CardAddButton>
