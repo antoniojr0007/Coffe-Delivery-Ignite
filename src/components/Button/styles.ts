@@ -18,6 +18,9 @@ export const ButtonContainer = styled.button<ButtonProps>`
   font-size: ${(props) => props.theme.sizes[18]};
   ${({ variant, theme }) => css`
     background: ${theme.colors[`${variant}`]};
+    span {
+      background-color: ${theme.colors[`${variant}`]};
+    }
   `}
 
   &:hover {

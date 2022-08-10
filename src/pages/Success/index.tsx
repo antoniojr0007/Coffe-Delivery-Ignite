@@ -6,7 +6,7 @@ import {
   DeliveryContainer,
   SectionContainer,
   SuccessContainer,
-  TitleContainer
+  TitleContainer,
 } from './styles'
 
 import Delivery from '../../assets/Delivery.svg'

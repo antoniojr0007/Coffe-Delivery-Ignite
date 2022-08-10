@@ -1,21 +1,21 @@
-import Button from '../../../../components/Button'
 import { TitleText } from '../../../../components/Typography'
-import { CoffeeCardSelected } from '../CoffeeCardSelected'
+import { useCart } from '../../../../hooks/useCartList'
+import { CoffeeCartCard } from '../CoffeeCartCard'
 import { PaymentTotal } from '../PaymentTotal'
 import { DetailContainer, SelectedCoffeesContainer } from './styles'
 
 export function SelectedCoffees() {
+  const { cartItems } = useCart()
   return (
     <SelectedCoffeesContainer>
       <TitleText fs={18} color="subtitle">
         Cafés selecionados
       </TitleText>
       <DetailContainer>
-        <CoffeeCardSelected />
-        <CoffeeCardSelected />
-        <CoffeeCardSelected />
+        {cartItems.map((item) => (
+          <CoffeeCartCard key={item.id} coffee={item} />
+        ))}
         <PaymentTotal />
-        <Button color="base-yellow">Confirmar pedido</Button>
       </DetailContainer>
     </SelectedCoffeesContainer>
   )
