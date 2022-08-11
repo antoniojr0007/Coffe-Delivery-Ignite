@@ -1,13 +1,18 @@
 import { ButtonHTMLAttributes, ReactNode } from 'react'
 import { ButtonContainer } from './styles'
 
-interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
-  title?: string | number
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  title?: string
   color?: string
   children?: ReactNode
 }
 
-export default function Button({ title, color, children, ...rest }: Props) {
+export default function Button({
+  title,
+  color,
+  children,
+  ...rest
+}: ButtonProps) {
   return (
     <ButtonContainer {...rest} variant={color}>
       {children}

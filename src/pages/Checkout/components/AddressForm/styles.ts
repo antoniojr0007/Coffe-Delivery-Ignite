@@ -12,7 +12,7 @@ export const AddressFormContainer = styled.div`
     grid-column: span 3;
     max-width: 12rem;
   }
-  .streat {
+  .street {
     grid-column: span 3;
   }
   .number {

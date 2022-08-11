@@ -1,18 +1,37 @@
 import { Clock, CurrencyDollar, MapPinLine } from 'phosphor-react'
+import { useEffect } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { useTheme } from 'styled-components'
+import Delivery from '../../assets/Delivery.svg'
 import { InfoWhithIcon } from '../../components/InfoWhithIcon'
 import { Text, TitleText } from '../../components/Typography'
+import { CheckoutData } from '../Checkout'
+import { paymentMethods } from '../Checkout/components/PlaymentMethod/PaymentMethodOptions'
 import {
   DeliveryContainer,
   SectionContainer,
   SuccessContainer,
-  TitleContainer,
+  TitleContainer
 } from './styles'
 
-import Delivery from '../../assets/Delivery.svg'
+interface LocationType {
+  state: CheckoutData
+}
 
 export function Success() {
   const { colors } = useTheme()
+
+  const { state } = useLocation() as unknown as LocationType
+
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if (!state) {
+      navigate('/')
+    }
+  }, [])
+
+  if (!state) return <></>
   return (
     <SuccessContainer className="container">
       <TitleContainer>
@@ -29,9 +48,9 @@ export function Success() {
             icon={<MapPinLine size={20} />}
             text={
               <Text>
-                Entrega em <strong>Rua João Daniel Martinelli, 102</strong>
+                Entrega em <strong>{state.street}</strong>
                 <br />
-                Farrapos - Porto Alegre, RS
+                {state.district} - {state.city}, {state.uf}
               </Text>
             }
             color={colors['base-purple']}
@@ -49,7 +68,8 @@ export function Success() {
             icon={<CurrencyDollar size={20} />}
             text={
               <Text>
-                Pagamento na entrega <strong>Cartão de Crédito</strong>
+                Pagamento na entrega
+                <strong>{paymentMethods[state.paymentMethod].label}</strong>
               </Text>
             }
             color={colors['base-yellow-dark']}

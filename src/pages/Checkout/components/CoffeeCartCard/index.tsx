@@ -11,7 +11,7 @@ import {
   ButtonRemover,
   CoffeeCardContainer,
   CoffeeCardImage,
-  CoffeeCardInfo,
+  CoffeeCardInfo
 } from './styles'
 
 interface CoffeeCartCardProps {
@@ -19,7 +19,7 @@ interface CoffeeCartCardProps {
 }
 
 export function CoffeeCartCard({ coffee }: CoffeeCartCardProps) {
-  const { changeCartItemQuantity, handleRemoveCartItem } = useCart()
+  const { changeCartItemQuantity, removeCartItem } = useCart()
   const coffeeTotal = coffee.price * coffee.quantity
   const formattedPrice = formatMoney(coffeeTotal)
   const { colors } = useTheme()
@@ -32,8 +32,8 @@ export function CoffeeCartCard({ coffee }: CoffeeCartCardProps) {
     changeCartItemQuantity(coffee.id, 'decrease')
   }
 
-  function handleRemoveItem() {
-    handleRemoveCartItem(coffee.id)
+  function handleRemove() {
+    removeCartItem(coffee.id)
   }
   return (
     <CoffeeCardContainer>
@@ -49,7 +49,7 @@ export function CoffeeCartCard({ coffee }: CoffeeCartCardProps) {
             onDecrease={handleDecrease}
             quantity={coffee.quantity}
           />
-          <ButtonRemover onClick={handleRemoveItem}>
+          <ButtonRemover onClick={handleRemove}>
             <Trash size={16} color={colors['base-purple']} />
             REMOVER
           </ButtonRemover>

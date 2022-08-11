@@ -1,22 +1,11 @@
-import {
-  Bank,
-  CreditCard,
-  CurrencyDollar,
-  MapPinLine,
-  Money
-} from 'phosphor-react'
+import { CurrencyDollar, MapPinLine } from 'phosphor-react'
 import { useTheme } from 'styled-components'
 import { TitleText } from '../../../../components/Typography'
 import { AddressForm } from '../AddressForm'
-import { PaymentMethodInput } from '../PlaymentMethodInput'
+import { PaymentMethodOptions } from '../PlaymentMethod/PaymentMethodOptions'
+
 import { SectionTitle } from '../SectionTitle'
-import {
-  CheckoutOrderFormContainer,
-  FormSectionContainer,
-  FormSectionInput,
-  FormSectionSelectPayment,
-  PaymentMethodOptions
-} from './styles'
+import { CheckoutOrderFormContainer, FormSectionContainer } from './styles'
 
 export function CheckoutOrderForm() {
   const { colors } = useTheme()
@@ -31,9 +20,7 @@ export function CheckoutOrderForm() {
           title="Endereço de Entrega"
           subtitle="Informe o endereço onde deseja receber seu pedido"
         />
-        <FormSectionInput>
-          <AddressForm />
-        </FormSectionInput>
+        <AddressForm />
       </FormSectionContainer>
       <FormSectionContainer>
         <SectionTitle
@@ -41,25 +28,7 @@ export function CheckoutOrderForm() {
           title="Pagamento"
           subtitle="O pagamento é feito na entrega. Escolha a forma que deseja pagar"
         />
-        <FormSectionSelectPayment>
-          <PaymentMethodOptions>
-            <PaymentMethodInput
-              icon={<CreditCard size={22} color={colors['base-purple']} />}
-              title="Cartão de crédito"
-              value="credit"
-            />
-            <PaymentMethodInput
-              icon={<Bank size={22} color={colors['base-purple']} />}
-              title="Cartão de débito"
-              value="debit"
-            />
-            <PaymentMethodInput
-              icon={<Money size={22} color={colors['base-purple']} />}
-              title="Dinheiro"
-              value="money"
-            />
-          </PaymentMethodOptions>
-        </FormSectionSelectPayment>
+        <PaymentMethodOptions />
       </FormSectionContainer>
     </CheckoutOrderFormContainer>
   )

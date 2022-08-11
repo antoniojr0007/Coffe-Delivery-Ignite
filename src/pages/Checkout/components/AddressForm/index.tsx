@@ -39,9 +39,9 @@ export function AddressForm() {
 
       <Input
         placeholder="Rua"
-        className="streat"
-        {...register('streat')}
-        error={errors.streat?.message}
+        className="street"
+        {...register('street')}
+        error={errors.street?.message}
       />
       <Input
         placeholder="Numero"
