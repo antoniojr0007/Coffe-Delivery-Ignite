@@ -11,7 +11,7 @@ import {
   ButtonRemover,
   CoffeeCardContainer,
   CoffeeCardImage,
-  CoffeeCardInfo
+  CoffeeCardInfo,
 } from './styles'
 
 interface CoffeeCartCardProps {
@@ -38,7 +38,7 @@ export function CoffeeCartCard({ coffee }: CoffeeCartCardProps) {
   return (
     <CoffeeCardContainer>
       <CoffeeCardImage>
-        <img src={`/coffees/${coffee.photo}`} alt={coffee.description} />
+        <img src={`/coffees/${coffee.photo}.svg`} alt={coffee.description} />
       </CoffeeCardImage>
       <CoffeeCardInfo>
         <Text color="subtitle">{coffee.name}</Text>

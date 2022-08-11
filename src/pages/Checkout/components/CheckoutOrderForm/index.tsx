@@ -3,7 +3,7 @@ import {
   CreditCard,
   CurrencyDollar,
   MapPinLine,
-  Money,
+  Money
 } from 'phosphor-react'
 import { useTheme } from 'styled-components'
 import { TitleText } from '../../../../components/Typography'
@@ -15,7 +15,7 @@ import {
   FormSectionContainer,
   FormSectionInput,
   FormSectionSelectPayment,
-  PaymentMethodOptions,
+  PaymentMethodOptions
 } from './styles'
 
 export function CheckoutOrderForm() {
@@ -46,14 +46,17 @@ export function CheckoutOrderForm() {
             <PaymentMethodInput
               icon={<CreditCard size={22} color={colors['base-purple']} />}
               title="Cartão de crédito"
+              value="credit"
             />
             <PaymentMethodInput
               icon={<Bank size={22} color={colors['base-purple']} />}
               title="Cartão de débito"
+              value="debit"
             />
             <PaymentMethodInput
               icon={<Money size={22} color={colors['base-purple']} />}
               title="Dinheiro"
+              value="money"
             />
           </PaymentMethodOptions>
         </FormSectionSelectPayment>

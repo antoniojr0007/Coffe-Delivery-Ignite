@@ -14,7 +14,7 @@ import {
   CardTags,
   CardTagSpan,
   CardTitle,
-  CoffeeCardContainer
+  CoffeeCardContainer,
 } from './styles'
 
 export interface Coffee {

@@ -3,8 +3,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import Logo from '../../assets/Logo.svg'
 import { useCart } from '../../hooks/useCartList'
-import Button from '../Button'
-import { HeaderButtonContainer, HeaderContainer } from './styles'
+import { HeaderButton, HeaderButtonContainer, HeaderContainer } from './styles'
 
 const Header: React.FC = () => {
   const { cartQuantity } = useCart()
@@ -16,15 +15,16 @@ const Header: React.FC = () => {
         </NavLink>
         <HeaderButtonContainer>
           <NavLink to={'/'}>
-            <Button color="base-purple-light" title="São Paulo, SP">
+            <HeaderButton variant="purple">
               <MapPinLine size={24} />
-            </Button>
+              São Paulo, SP
+            </HeaderButton>
           </NavLink>
           <NavLink to={'/Checkout'}>
-            <Button color="base-yellow-light">
+            <HeaderButton variant="yellow">
               {cartQuantity >= 1 && <span>{cartQuantity}</span>}
               <ShoppingCart size={24} />
-            </Button>
+            </HeaderButton>
           </NavLink>
         </HeaderButtonContainer>
       </div>

@@ -31,7 +31,7 @@ export function PaymentTotal() {
           R$ {totalFormatted}
         </Text>
       </PaymentTotalText>
-      <Button color="base-yellow" disabled={cartQuantity <= 0}>
+      <Button color="base-yellow" disabled={cartQuantity <= 0} type="submit">
         Confirmar pedido
       </Button>
     </PaymentTotalContainer>
