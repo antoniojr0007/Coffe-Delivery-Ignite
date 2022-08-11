@@ -1,6 +1,6 @@
 import { rgba } from 'polished'
 import styled from 'styled-components'
-import BackgroundImg from '../../../../assets/Background.png'
+import BackgroundImg from '../../../../assets/Background.svg'
 import { SubTitleText, TitleText } from '../../../../components/Typography'
 
 export const IntroContainer = styled.div`

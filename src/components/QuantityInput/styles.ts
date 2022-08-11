@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
 interface QuantityInputProps {
-  size: 'medium' | 'small'
+  size: 'small' | 'medium'
 }
 
 export const QuantityInputContainer = styled.div<QuantityInputProps>`
